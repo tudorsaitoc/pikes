@@ -122,22 +122,23 @@
    <h4 id="From_Text_to_Mentions"><a name="text_to_mentions" class="anchor" id="text_to_mentions"></a> From Text to Mentions</h4> 
    <p>Given a text resource, PIKES performs the following NLP tasks:</p> 
    <ul> 
-    <li><b>Tokenization</b>, <b>Part-of-Speech tagging</b> (POS tagging) and <b>Word Sense Disambiguation</b>, to split the text into tokens, each of them annotated with its POS (e.g., proper noun, …) and disambiguated WordNet synset.</li> 
-    <li><b>Named Entity Recognition and Classification</b> and <b>Entity Linking</b>, to identify spans of text denoting entities of predefined categories (e.g., persons, organizations, …) and link them to well-known entities in external resources such as DBpedia.</li> 
-    <li><b>Temporal Expression Recognition and Normalization</b>, to identify dates, times and temporal durations in a text. A normalized time value (e.g., the date components), based on the TimeML standard, is extracted. Relative temporal expressions such as ‘yesterday’ are normalized based on the <i>document creation time</i>.</li> 
+    <li><b>Tokenization</b>, <b>Part-of-Speech tagging</b> (POS tagging) and <b>Word Sense Disambiguation</b> (WSD), to split the text into tokens, each of them annotated with its POS (e.g., proper noun, …) and disambiguated WordNet synset.</li> 
+    <li><b>Named Entity Recognition and Classification</b> (NERC) and <b>Entity Linking</b>, to identify spans of text denoting entities of predefined categories (e.g., persons, organizations, …) and link them to well-known entities in external resources such as DBpedia.</li> 
+    <li><b>Temporal Expression Recognition and Normalization</b> (TERN), to identify dates, times and temporal durations in a text. A normalized time value (e.g., the date components), based on the <a class="externalLink" href="http://www.timeml.org/site/index.html">TimeML</a> standard, is extracted. Relative temporal expressions such as ‘yesterday’ are normalized based on the <i>document creation time</i>.</li> 
     <li><b>Coreference Resolution</b>, to identify sets of text spans, called coreference sets, denoting the same referent.</li> 
     <li><b>Dependency Parsing</b>, to organize the tokens of each sentence in a tree, with directed edges connecting a governing token (e.g., a verb) to its dependent tokens (e.g., its subject), labeled based on the kind of dependency (e.g., subj).</li> 
-    <li><b>Semantic Role Labeling</b> (SRL), to annotate occurrences of frames in the text, identifying predicate, arguments and their roles. PIKES consider the SRL annotation with respect to PropBank and NomBank frames. Mapping between different frame systems are available and indeed we exploit them in this work.</li> 
+    <li><b>Semantic Role Labeling</b> (SRL), to annotate occurrences of frames in the text, identifying predicate, arguments and their roles. PIKES consider the SRL annotation with respect to <a class="externalLink" href="http://verbs.colorado.edu/~mpalmer/projects/ace.html">PropBank</a> and <a class="externalLink" href="http://nlp.cs.nyu.edu/meyers/NomBank.html">NomBank</a> frames. Mapping between different frame systems are available and indeed we exploit them in this work.</li> 
    </ul> 
+   <p>For the initial NLP tasks, PIKES wraps several state-of-the-art modules: <a class="externalLink" href="http://nlp.stanford.edu/software/corenlp.shtml">Stanford CoreNLP</a> for POS tagging, NERC, TERN, and coreference resolution; <a class="externalLink" href="https://code.google.com/p/mate-tools/">mate-tools</a> for dependency parsing and SRL; <a class="externalLink" href="http://spotlight.dbpedia.org/">DBpedia Spotlight</a> for entity linking; and, <a class="externalLink" href="http://ixa2.si.ehu.es/ukb/">UKB</a> for WSD.</p> 
    <p>ks:InstanceMentions are extracted from NLP annotations according to the following rules:</p> 
    <ul> 
-    <li>a <tt>ks:TimeMention</tt> is created for each temporal expression; storing the normalized time (represented using the OWL Time ontology) using property <tt>ks:normalizedValue</tt>.</li> 
+    <li>a <tt>ks:TimeMention</tt> is created for each temporal expression; storing the normalized time (represented using the <a class="externalLink" href="http://www.w3.org/TR/owl-time/">OWL Time ontology</a>) using property <tt>ks:normalizedValue</tt>.</li> 
     <li>a <tt>ks:NameMention</tt> is created for each named entity and token POS-tagged as proper noun; if available, the entity class is stored using property <tt>ks:nercType</tt>.</li> 
     <li>a <tt>ks:FrameMention</tt> is created for each verb or noun predicate recognized by SRL and associated to the PropBank / NomBank roleset via property <tt>ks:roleset</tt>.</li> 
     <li>a <tt>ks:AttributeMention</tt> is created for each adjective or adverb in the text, including its adjectival or adverbial modifiers in the dependency tree (e.g., ‘very’ in case of ‘very strong’); the mention is associated via property <tt>ks:normalizedValue</tt> to a normalized lexical value URI built based on token synsets.</li> 
     <li>a generic <tt>ks:InstanceMention</tt> is created for each pronoun or common noun not covered by other mentions.</li> 
    </ul> 
-   <p>Properties <tt>nif:beginIndex</tt>, <tt>nif:endIndex</tt> and <tt>nif:anchorOf</tt> (the mention textual extent) from the NLP Interchange Format (NIF) vocabulary are extracted for <tt>ks:InstanceMentions</tt>, whose URIs are minted according to the NIF offset-based URI scheme. DBpedia URIs produced by entity linking are associated to corresponding <tt>ks:InstanceMentions</tt> via property <tt>ks:linkedTo</tt>.</p> 
+   <p>Properties <tt>nif:beginIndex</tt>, <tt>nif:endIndex</tt> and <tt>nif:anchorOf</tt> (the mention textual extent) from the <a class="externalLink" href="http://nlp2rdf.org/nif-1-0">NLP Interchange Format (NIF) vocabulary</a> are extracted for <tt>ks:InstanceMentions</tt>, whose URIs are minted according to the NIF offset-based URI scheme. DBpedia URIs produced by entity linking are associated to corresponding <tt>ks:InstanceMentions</tt> via property <tt>ks:linkedTo</tt>.</p> 
    <p><tt>ks:ParticipationMentions</tt> are extracted from text spans marked as predicate arguments by SRL. Properties <tt>ks:role</tt>, <tt>ks:frame</tt> and <tt>ks:argument</tt> associate the <tt>ks:ParticipationMention</tt> respectively to the argument role, to the <tt>ks:FrameMention</tt> for the predicate, and to one or more <tt>ks:InstanceMentions</tt> corresponding to the argument, which are identified based on a regular expression evaluated on the dependency tree.</p> 
    <p><tt>ks:CoreferenceMentions</tt> are extracted from coreference sets. Mentions corresponding to coreferential spans are linked to the <tt>ks:CoreferenceMention</tt> using either property <tt>ks:coreferential</tt> or <tt>ks:coreferentialConjunct</tt>. The first is used for mentions matching exactly a coreferential span, whereas the latter is used for mentions corresponding to coordinated conjuncts in a coreferential span.</p> 
   </div> 
@@ -258,7 +259,7 @@ WHERE  { ?m1 a ks:FrameMention; ks:roleset ?rs1.
 </pre> 
     </div> 
    </div> 
-   <p>Data resulting from rule-based mapping is then post-processed to obtain the final version of the Instance layer. Post-processing serves two goals: materialize implicit knowledge; and compact the resulting knowledge base, so to make it more manageable and easy to use. The first goal is accomplished by materializing all the inferences computed with RDFS rules, OWL 2 RL rules for owl:sameAs knowledge propagation, and a custom rule establishing that whenever an instance participates to a frame, also the instances it ks:includes participate to the frame:</p> 
+   <p>Data resulting from rule-based mapping is then post-processed to obtain the final version of the Instance layer. Post-processing serves two goals: materialize implicit knowledge; and compact the resulting knowledge base, so to make it more manageable and easy to use. The first goal is accomplished by materializing all the inferences computed with <a class="externalLink" href="http://www.w3.org/TR/rdf11-mt/">RDFS rules</a>, <a class="externalLink" href="http://www.w3.org/TR/owl2-profiles/#OWL_2_RL">OWL 2 RL rules</a> for <tt>owl:sameAs</tt> knowledge propagation, and a custom rule establishing that whenever an instance participates to a frame, also the instances it ks:includes participate to the frame:</p> 
    <div class="source"> 
     <div class="source"> 
      <pre>INSERT { GRAPH ?g { ?if ?p ?i } ?m ks:expresses ?g. }
@@ -270,7 +271,7 @@ WHERE  { GRAPH ?g1 { ?if ?p ?ig. }
 </pre> 
     </div> 
    </div> 
-   <p>The second is accomplished in three ways. First, PIKES performs smushing, i.e., it keeps only a canonical URI for each instance and discard the remaining <tt>owl:sameAs</tt> aliases. Then, PIKES discards every unnamed instance that <tt>ks:includes</tt> some member instance, as the custom rule above already propagated relevant participation information to its members. Finally, PIKES compacts the RDF representation of the links between a mention and the assertions it <tt>ks:expresses</tt>, ensuring that whenever a set of assertions is expressed by the same set of mentions, then the assertions are placed in a unique graph associated to all the mentions, resulting in a maximal reduction of the number of RDF quads.</p> 
+   <p>The second is accomplished in three ways. First, PIKES performs smushing, i.e., it keeps only a canonical URI for each instance and discard the remaining <tt>owl:sameAs</tt> aliases. Then, PIKES discards every unnamed instance that <tt>ks:includes</tt> some member instance, as the custom rule above already propagated relevant participation information to its members. Finally, PIKES compacts the RDF representation of the links between a mention and the assertions it <tt>ks:expresses</tt>, ensuring that whenever a set of assertions is expressed by the same set of mentions, then the assertions are placed in a unique graph associated to all the mentions, resulting in a maximal reduction of the number of RDF quads. Post-processing is implemented using the <a class="externalLink" href="http://rdfpro.fbk.eu/">RDFpro</a> tool extended with several custom plugins.</p> 
   </div> 
  </div> 
 </div>
@@ -343,7 +344,6 @@ WHERE  { GRAPH ?g1 { ?if ?p ?ig. }
 
 	<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 	<script src="./js/lightbox.min.js"></script>
-	<script src="./js/reflow-scroll.js"></script>
 	
 <div style="font: normal 14px/1.5em sans-serif !important;" id="dkmbar-container">
   <div id="dkmbar">

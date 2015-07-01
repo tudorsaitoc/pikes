@@ -8,7 +8,7 @@
 
 	<head>
 		<meta charset="UTF-8" />
-		<title>pikes - Project Modules</title>
+		<title>pikes - PIKES in a nutshell</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="" />
 		<meta http-equiv="content-language" content="en" />
@@ -37,7 +37,7 @@
                 p.copyright { display: none }</style>
 	</head>
 
-	<body class="page-modules project-pikes" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
+	<body class="page-overview project-pikes" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
 
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
@@ -51,11 +51,11 @@
                         <span>PIKES</span></a>
 					<div class="nav-collapse collapse" id="top-nav-collapse">
 						<ul class="nav pull-right">
-							<li class="dropdown">
+							<li class="dropdown active">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
 								<ul class="dropdown-menu">
 									<li ><a href="index.html" title="Home">Home</a></li>
-									<li ><a href="overview.html" title="Pikes in a nutshell">Pikes in a nutshell</a></li>
+									<li class="active"><a href="" title="Pikes in a nutshell">Pikes in a nutshell</a></li>
 									<li ><a href="model.html" title="Representation model">Representation model</a></li>
 									<li ><a href="pipeline.html" title="Extraction pipeline">Extraction pipeline</a></li>
 								</ul>
@@ -67,7 +67,7 @@
 									<li ><a href="evaluation.html" title="Evaluation (May 2015)">Evaluation (May 2015)</a></li>
 								</ul>
 							</li>
-							<li class="dropdown active">
+							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Maven Reports <b class="caret"></b></a>
 								<ul class="dropdown-menu">
 									<li class="dropdown-submenu ">
@@ -79,7 +79,7 @@
 											<li ><a href="dependency-management.html" title="Dependency Management">Dependency Management</a></li>
 											<li ><a href="distribution-management.html" title="Distribution Management">Distribution Management</a></li>
 											<li ><a href="index.html" title="About">About</a></li>
-											<li class="active"><a href="" title="Project Modules">Project Modules</a></li>
+											<li ><a href="modules.html" title="Project Modules">Project Modules</a></li>
 											<li ><a href="plugin-management.html" title="Plugin Management">Plugin Management</a></li>
 											<li ><a href="plugins.html" title="Project Plugins">Project Plugins</a></li>
 											<li ><a href="team-list.html" title="Project Team">Project Team</a></li>
@@ -113,43 +113,22 @@
 	<div class="row">
 		<div class="span12">
 			<div class="body-content">
-<div class="section"> 
- <div class="page-header">
-  <h2 id="Project_Modules">Project Modules</h2>
- </div> 
- <a name="Project_Modules"></a> 
- <p>This project has declared the following modules:</p> 
- <table border="0" class="bodyTable table table-striped table-hover"> 
-  <thead> 
-   <tr class="a"> 
-    <th>Name</th> 
-    <th>Description</th> 
-   </tr> 
-  </thead> 
-  <tbody> 
-   <tr class="b"> 
-    <td><a href="../../../target/website/pikes-naflib/index.html">pikes-naflib</a></td> 
-    <td>Pikes is a Knowledge Extraction Suite</td> 
-   </tr> 
-   <tr class="a"> 
-    <td><a href="../../../pikes-resources/./target/website/pikes-resources/index.html">pikes-resources</a></td> 
-    <td>Pikes is a Knowledge Extraction Suite</td> 
-   </tr> 
-   <tr class="b"> 
-    <td><a href="../../../pikes-tintop/./target/website/pikes-tintop/index.html">pikes-tintop</a></td> 
-    <td>Pikes is a Knowledge Extraction Suite</td> 
-   </tr> 
-   <tr class="a"> 
-    <td><a href="../../../pikes-raid/./target/website/pikes-raid/index.html">pikes-raid</a></td> 
-    <td>Pikes is a Knowledge Extraction Suite</td> 
-   </tr> 
-   <tr class="b"> 
-    <td><a href="../../../pikes-rdf/./target/website/pikes-rdf/index.html">pikes-rdf</a></td> 
-    <td>Pikes is a Knowledge Extraction Suite</td> 
-   </tr> 
-  </tbody> 
- </table> 
-</div>
+<div class="page-header">
+ <h1>PIKES in a nutshell</h1>
+</div> 
+<p><b>PIKES</b> is a tool for <b>Knowledge Extraction</b> that automatically extracts “things” of interest (e.g., events, persons, organizations), and facts about them, from a (potentially large) text corpus. We illustrate PIKES with the figure below, showing how PIKES processes a simple text document consisting of two sentences: <i>“G.W. Bush and Bono are very strong supporters of the fight of HIV in Africa. Their March 2002 meeting resulted in a 5 billion dollar aid.”.</i></p> 
+<div style="text-align: center; padding-top: 20px; padding-bottom: 40px"> 
+ <img src="images/overview.png" alt="Overview of PIKES" /> 
+</div> 
+<p>Starting from an English text <b>resources</b> (shown in red in the figure), PIKES applies a number of <b>Natural Language Processing (NLP) tools</b> to annotate it, include as <i>tokenization</i>, <i>part-of-speech tagging</i> and <i>word sense disambiguation</i> to split the text in disambiguated tokens, <i>named entity recognition</i> and <i>time expression recognition</i>, <i>dependency parsing</i> (shown above the text in the figure) and <i>semantic role labelling</i> (shown below the text). In particular, the use of semantic role labelling allows PIKES to <b>extract frames</b>, i.e., prototypical situations consisting of predicate and role fillers (e.g., <tt>support.01</tt> predicate with beneficiary role <tt>A1</tt> ‘fight of HIV’ and manner <tt>AM-MNR</tt> ‘very strong’ in the figure).</p> 
+<p>NLP annotations are then translated to a graph of <b>mentions</b> (shown in green in the figure), which are spans of text denoting something of interest (e.g., the person ‘G. W. Bush’, the attribute ‘very strong’, the predicate ‘resulted’, …), enriched with attributes and relations precisely characterizing what they represent. Mentions aim at representing, in a structured form, all the information needed to extract the knowledge conveyed by the text, so that access to the text is not needed anymore.</p> 
+<p>Mentions from multiple sentences are finally processed to derive <b>Instances</b> (shown in blue in the figure), i.e., persons, locations, events and other entities of the domain of discourse abstracting from their textual realization, and to extract &lt;subject, predicate, object&gt; <b>facts</b> about them. PIKES accomplishes this step using a <b>rule-based strategy</b> that allows to interpret collected information handling relevant linguistic phenomena such as argument nominalizations, frame-frame relations and group entities.</p> 
+<p>The source text with its metadata (red part in the figure), the mentions extracted from it (green part) and the instances generated by applying rules (blue part) represent the three layers of PIKES <b>representation model</b>. This model is fully <b>expressed in RDF</b> according to Semantic Web best practices and, by exploiting the <b>links between layers</b>, allows to relate each triple produced at the Instances layer to the part (or parts) of text and the intermediate NLP output from where it was derived.</p> 
+<p>Additional details on how PIKES work are provided by the following pages:</p> 
+<ul> 
+ <li><a href="model.html">PIKES representation model</a></li> 
+ <li><a href="pipeline.html">PIKES extraction pipeline</a></li> 
+</ul>
 			</div>
 		</div>
 	</div>
@@ -168,8 +147,8 @@
 						<li >
 							<a href="index.html" title="Home">Home</a>
 						</li>
-						<li >
-							<a href="overview.html" title="Pikes in a nutshell">Pikes in a nutshell</a>
+						<li class="active">
+							<a href="#" title="Pikes in a nutshell">Pikes in a nutshell</a>
 						</li>
 						<li >
 							<a href="model.html" title="Representation model">Representation model</a>

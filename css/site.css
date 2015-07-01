@@ -1,1 +1,34 @@
-/* You can override this file with your own styles */
+.brand span {
+    padding-left: 55px;
+}
+
+.brand img {
+    position: absolute;
+    top: 10px;
+}
+
+#well-home {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#well-home h1 {
+    font-size: 400%;
+}
+
+#well-home h1 img {
+    height: 100px;
+    position: relative;
+    top: -10px;
+}
+
+#well-home .title2 {
+    font-size: 150%;
+    padding-top: 15px;
+}
+
+/* Reflow bugfix */
+
+h1[id]:before, h2[id]:before, h3[id]:before, h4[id]:before, h5[id]:before, h6[id]:before, a[name]:before {
+    display: none !important;
+}

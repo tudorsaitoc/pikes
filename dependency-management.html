@@ -8,7 +8,7 @@
 
 	<head>
 		<meta charset="UTF-8" />
-		<title>pikes - Project Modules</title>
+		<title>pikes - Project Dependency Management</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="" />
 		<meta http-equiv="content-language" content="en" />
@@ -37,7 +37,7 @@
                 p.copyright { display: none }</style>
 	</head>
 
-	<body class="page-modules project-pikes" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
+	<body class="page-dependency-management project-pikes" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
 
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
@@ -76,10 +76,10 @@
 											<li ><a href="dependencies.html" title="Dependencies">Dependencies</a></li>
 											<li ><a href="dependency-convergence.html" title="Dependency Convergence">Dependency Convergence</a></li>
 											<li ><a href="dependency-info.html" title="Dependency Information">Dependency Information</a></li>
-											<li ><a href="dependency-management.html" title="Dependency Management">Dependency Management</a></li>
+											<li class="active"><a href="" title="Dependency Management">Dependency Management</a></li>
 											<li ><a href="distribution-management.html" title="Distribution Management">Distribution Management</a></li>
 											<li ><a href="index.html" title="About">About</a></li>
-											<li class="active"><a href="" title="Project Modules">Project Modules</a></li>
+											<li ><a href="modules.html" title="Project Modules">Project Modules</a></li>
 											<li ><a href="plugin-management.html" title="Plugin Management">Plugin Management</a></li>
 											<li ><a href="plugins.html" title="Project Plugins">Project Plugins</a></li>
 											<li ><a href="team-list.html" title="Project Team">Project Team</a></li>
@@ -115,40 +115,237 @@
 			<div class="body-content">
 <div class="section"> 
  <div class="page-header">
-  <h2 id="Project_Modules">Project Modules</h2>
+  <h2 id="Project_Dependency_Management">Project Dependency Management</h2>
  </div> 
- <a name="Project_Modules"></a> 
- <p>This project has declared the following modules:</p> 
- <table border="0" class="bodyTable table table-striped table-hover"> 
-  <thead> 
-   <tr class="a"> 
-    <th>Name</th> 
-    <th>Description</th> 
-   </tr> 
-  </thead> 
-  <tbody> 
-   <tr class="b"> 
-    <td><a href="../../../target/website/pikes-naflib/index.html">pikes-naflib</a></td> 
-    <td>Pikes is a Knowledge Extraction Suite</td> 
-   </tr> 
-   <tr class="a"> 
-    <td><a href="../../../pikes-resources/./target/website/pikes-resources/index.html">pikes-resources</a></td> 
-    <td>Pikes is a Knowledge Extraction Suite</td> 
-   </tr> 
-   <tr class="b"> 
-    <td><a href="../../../pikes-tintop/./target/website/pikes-tintop/index.html">pikes-tintop</a></td> 
-    <td>Pikes is a Knowledge Extraction Suite</td> 
-   </tr> 
-   <tr class="a"> 
-    <td><a href="../../../pikes-raid/./target/website/pikes-raid/index.html">pikes-raid</a></td> 
-    <td>Pikes is a Knowledge Extraction Suite</td> 
-   </tr> 
-   <tr class="b"> 
-    <td><a href="../../../pikes-rdf/./target/website/pikes-rdf/index.html">pikes-rdf</a></td> 
-    <td>Pikes is a Knowledge Extraction Suite</td> 
-   </tr> 
-  </tbody> 
- </table> 
+ <a name="Project_Dependency_Management"></a> 
+ <div class="section"> 
+  <h3 id="compile">compile</h3> 
+  <a name="compile"></a> 
+  <p>The following is a list of compile dependencies in the DependencyManagement of this project. These dependencies can be included in the submodules to compile and run the submodule:</p> 
+  <table border="0" class="bodyTable table table-striped table-hover"> 
+   <thead> 
+    <tr class="a"> 
+     <th>GroupId</th> 
+     <th>ArtifactId</th> 
+     <th>Version</th> 
+     <th>Classifier</th> 
+     <th>Type</th> 
+     <th>License</th> 
+    </tr> 
+   </thead> 
+   <tbody> 
+    <tr class="b"> 
+     <td>ch.qos.logback</td> 
+     <td><a class="externalLink" href="http://logback.qos.ch">logback-classic</a></td> 
+     <td>1.1.2</td> 
+     <td>-</td> 
+     <td>jar</td> 
+     <td><a class="externalLink" href="http://www.eclipse.org/legal/epl-v10.html">Eclipse Public License - v 1.0</a>, <a class="externalLink" href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">GNU Lesser General Public License</a></td> 
+    </tr> 
+    <tr class="a"> 
+     <td>ch.qos.logback</td> 
+     <td><a class="externalLink" href="http://logback.qos.ch">logback-core</a></td> 
+     <td>1.1.2</td> 
+     <td>-</td> 
+     <td>jar</td> 
+     <td><a class="externalLink" href="http://www.eclipse.org/legal/epl-v10.html">Eclipse Public License - v 1.0</a>, <a class="externalLink" href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">GNU Lesser General Public License</a></td> 
+    </tr> 
+    <tr class="b"> 
+     <td>com.github.spullara.mustache.java</td> 
+     <td><a class="externalLink" href="http://github.com/spullara/mustache.java">compiler</a></td> 
+     <td>0.8.12</td> 
+     <td>-</td> 
+     <td>jar</td> 
+     <td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a></td> 
+    </tr> 
+    <tr class="a"> 
+     <td>com.google.code.findbugs</td> 
+     <td><a class="externalLink" href="https://code.google.com/p/jsr-305/">jsr305</a></td> 
+     <td>2.0.3</td> 
+     <td>-</td> 
+     <td>jar</td> 
+     <td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></td> 
+    </tr> 
+    <tr class="b"> 
+     <td>com.google.guava</td> 
+     <td><a class="externalLink" href="http://code.google.com/p/guava-libraries/guava">guava</a></td> 
+     <td>17.0</td> 
+     <td>-</td> 
+     <td>jar</td> 
+     <td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></td> 
+    </tr> 
+    <tr class="a"> 
+     <td>commons-cli</td> 
+     <td><a class="externalLink" href="http://commons.apache.org/cli/">commons-cli</a></td> 
+     <td>1.2</td> 
+     <td>-</td> 
+     <td>jar</td> 
+     <td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></td> 
+    </tr> 
+    <tr class="b"> 
+     <td>commons-io</td> 
+     <td><a class="externalLink" href="http://commons.apache.org/io/">commons-io</a></td> 
+     <td>2.4</td> 
+     <td>-</td> 
+     <td>jar</td> 
+     <td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></td> 
+    </tr> 
+    <tr class="a"> 
+     <td>commons-lang</td> 
+     <td><a class="externalLink" href="http://commons.apache.org/lang/">commons-lang</a></td> 
+     <td>2.6</td> 
+     <td>-</td> 
+     <td>jar</td> 
+     <td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></td> 
+    </tr> 
+    <tr class="b"> 
+     <td>de.bwaldvogel</td> 
+     <td><a class="externalLink" href="http://www.bwaldvogel.de/liblinear-java/">liblinear</a></td> 
+     <td>1.95</td> 
+     <td>-</td> 
+     <td>jar</td> 
+     <td><a class="externalLink" href="http://www.opensource.org/licenses/bsd-license.php">The BSD License</a></td> 
+    </tr> 
+    <tr class="a"> 
+     <td>edu.stanford.nlp</td> 
+     <td><a class="externalLink" href="http://nlp.stanford.edu/software/corenlp.shtml">stanford-corenlp</a></td> 
+     <td>3.4</td> 
+     <td>models</td> 
+     <td>jar</td> 
+     <td><a class="externalLink" href="http://www.gnu.org/licenses/gpl-2.0.txt">GNU General Public License Version 2</a></td> 
+    </tr> 
+    <tr class="b"> 
+     <td>edu.stanford.nlp</td> 
+     <td><a class="externalLink" href="http://nlp.stanford.edu/software/corenlp.shtml">stanford-corenlp</a></td> 
+     <td>3.4</td> 
+     <td>-</td> 
+     <td>jar</td> 
+     <td><a class="externalLink" href="http://www.gnu.org/licenses/gpl-2.0.txt">GNU General Public License Version 2</a></td> 
+    </tr> 
+    <tr class="a"> 
+     <td>eu.fbk.dkm.utils</td> 
+     <td>utils</td> 
+     <td>1.0</td> 
+     <td>-</td> 
+     <td>jar</td> 
+     <td>-</td> 
+    </tr> 
+    <tr class="b"> 
+     <td>eu.fbk.pikes</td> 
+     <td>pikes-naflib</td> 
+     <td>1.0-SNAPSHOT</td> 
+     <td>-</td> 
+     <td>jar</td> 
+     <td>-</td> 
+    </tr> 
+    <tr class="a"> 
+     <td>eu.fbk.pikes</td> 
+     <td>pikes-rdf</td> 
+     <td>1.0-SNAPSHOT</td> 
+     <td>-</td> 
+     <td>jar</td> 
+     <td>-</td> 
+    </tr> 
+    <tr class="b"> 
+     <td>eu.fbk.pikes</td> 
+     <td>pikes-resources</td> 
+     <td>1.0-SNAPSHOT</td> 
+     <td>-</td> 
+     <td>jar</td> 
+     <td>-</td> 
+    </tr> 
+    <tr class="a"> 
+     <td>eu.fbk.rdfpro</td> 
+     <td><a class="externalLink" href="http://rdfpro.fbk.eu/rdfprolib.html">rdfpro-core</a></td> 
+     <td>0.4-SNAPSHOT</td> 
+     <td>-</td> 
+     <td>jar</td> 
+     <td><a class="externalLink" href="http://creativecommons.org/publicdomain/zero/1.0/legalcode.txt">Public Domain (Creative Commons CC0)</a></td> 
+    </tr> 
+    <tr class="b"> 
+     <td>eu.fbk.rdfpro</td> 
+     <td><a class="externalLink" href="http://rdfpro.fbk.eu/rdfpro-tql.html">rdfpro-tql</a></td> 
+     <td>0.4-SNAPSHOT</td> 
+     <td>-</td> 
+     <td>jar</td> 
+     <td><a class="externalLink" href="http://creativecommons.org/publicdomain/zero/1.0/legalcode.txt">Public Domain (Creative Commons CC0)</a></td> 
+    </tr> 
+    <tr class="a"> 
+     <td>org.apache.commons</td> 
+     <td><a class="externalLink" href="http://commons.apache.org/proper/commons-lang/">commons-lang3</a></td> 
+     <td>3.4</td> 
+     <td>-</td> 
+     <td>jar</td> 
+     <td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache License, Version 2.0</a></td> 
+    </tr> 
+    <tr class="b"> 
+     <td>org.codehaus.guessencoding</td> 
+     <td>guessencoding</td> 
+     <td>1.4</td> 
+     <td>-</td> 
+     <td>jar</td> 
+     <td>-</td> 
+    </tr> 
+    <tr class="a"> 
+     <td>org.fbk.cit.hlt</td> 
+     <td><a class="externalLink" href="https://bitbucket.org/fbk/twm-lib">thewikimachine</a></td> 
+     <td>1.3.1</td> 
+     <td>-</td> 
+     <td>jar</td> 
+     <td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache License, Version 2.0</a></td> 
+    </tr> 
+    <tr class="b"> 
+     <td>org.jdom</td> 
+     <td><a class="externalLink" href="http://www.jdom.org">jdom2</a></td> 
+     <td>2.0.4</td> 
+     <td>-</td> 
+     <td>jar</td> 
+     <td><a class="externalLink" href="https://raw.github.com/hunterhacker/jdom/master/LICENSE.txt">Similar to Apache License but with the acknowledgment clause removed</a></td> 
+    </tr> 
+    <tr class="a"> 
+     <td>org.slf4j</td> 
+     <td><a class="externalLink" href="http://www.slf4j.org">slf4j-api</a></td> 
+     <td>1.7.7</td> 
+     <td>-</td> 
+     <td>jar</td> 
+     <td><a class="externalLink" href="http://www.opensource.org/licenses/mit-license.php">MIT License</a></td> 
+    </tr> 
+    <tr class="b"> 
+     <td>tw.edu.ntu.csie</td> 
+     <td><a class="externalLink" href="http://www.csie.ntu.edu.tw/~cjlin/libsvm/">libsvm</a></td> 
+     <td>3.17</td> 
+     <td>-</td> 
+     <td>jar</td> 
+     <td><a class="externalLink" href="http://www.csie.ntu.edu.tw/~cjlin/libsvm/COPYRIGHT">BSD 3-Clause License</a></td> 
+    </tr> 
+   </tbody> 
+  </table> 
+ </div> 
+ <div class="section"> 
+  <h3 id="test">test</h3> 
+  <a name="test"></a> 
+  <p>The following is a list of test dependencies in the DependencyManagement of this project. These dependencies can be included in the submodules to compile and run unit tests for the submodule:</p> 
+  <table border="0" class="bodyTable table table-striped table-hover"> 
+   <thead> 
+    <tr class="a"> 
+     <th>GroupId</th> 
+     <th>ArtifactId</th> 
+     <th>Version</th> 
+     <th>Type</th> 
+     <th>License</th> 
+    </tr> 
+   </thead> 
+   <tbody> 
+    <tr class="b"> 
+     <td>junit</td> 
+     <td><a class="externalLink" href="http://junit.org">junit</a></td> 
+     <td>4.11</td> 
+     <td>jar</td> 
+     <td><a class="externalLink" href="http://www.opensource.org/licenses/cpl1.0.txt">Common Public License Version 1.0</a></td> 
+    </tr> 
+   </tbody> 
+  </table> 
+ </div> 
 </div>
 			</div>
 		</div>

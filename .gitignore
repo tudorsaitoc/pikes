@@ -6,6 +6,7 @@ pikes-resources/
 pikes-tintop/
 pikes.iml
 target/
-
+src/
+sync-demo.sh
 
 upload-website.sh

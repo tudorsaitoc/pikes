@@ -10,3 +10,5 @@ src/
 sync-demo.sh
 
 upload-website.sh
+.DS_Store
+test

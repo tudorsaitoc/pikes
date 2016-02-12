@@ -19,7 +19,10 @@ eu.fbk.dkm.pikes.resources.ontonotes
 eu.fbk.dkm.pikes.resources.ontonotes.frames
 eu.fbk.dkm.pikes.resources.ontonotes.senses
 eu.fbk.dkm.pikes.resources.reader
+eu.fbk.dkm.pikes.resources.signalmedia
+eu.fbk.dkm.pikes.resources.tempeval
 eu.fbk.dkm.pikes.resources.trec
+eu.fbk.dkm.pikes.resources.treccani
 eu.fbk.dkm.pikes.resources.util.corpus
 eu.fbk.dkm.pikes.resources.util.fnlu
 eu.fbk.dkm.pikes.resources.util.onsenses
@@ -28,13 +31,14 @@ eu.fbk.dkm.pikes.resources.util.semlink.vnfn
 eu.fbk.dkm.pikes.resources.util.semlink.vnfnroles
 eu.fbk.dkm.pikes.resources.util.semlink.vnpb
 eu.fbk.dkm.pikes.resources.vuaopinion
+eu.fbk.dkm.pikes.resources.wes
 eu.fbk.dkm.pikes.tintop
 eu.fbk.dkm.pikes.tintop.annotators
 eu.fbk.dkm.pikes.tintop.annotators.models
 eu.fbk.dkm.pikes.tintop.annotators.raw
-eu.fbk.dkm.pikes.tintop.old
 eu.fbk.dkm.pikes.tintop.orchestrator
 eu.fbk.dkm.pikes.tintop.server
 eu.fbk.dkm.pikes.tintop.util
+eu.fbk.dkm.pikes.tintop.util.framenet
 eu.fbk.shell.mdfsa.data.structures
 ixa.kaflib

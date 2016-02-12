@@ -23,11 +23,11 @@ under the License.
     <link>http://dkm.fbk.eu/pikes/</link>
     <description>pikes - Checkstyle report</description>
     <language>en-us</language>
-    <copyright>&#169;2015 FBK-irst</copyright>
+    <copyright>&#169;2015 - 2016 FBK-irst</copyright>
     <item>
-      <title>File: 292,
-             Errors: 10,
-             Warnings: 11430,
+      <title>File: 318,
+             Errors: 16,
+             Warnings: 12038,
              Infos: 0
       </title>
             <link>http://dkm.fbk.eu/pikes//checkstyle.html</link>
@@ -206,21 +206,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  63
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.util.PipelineConfiguration.java">eu/fbk/dkm/pikes/tintop/util/PipelineConfiguration.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  8
+                  86
                 </td>
                 <td>
                   0
@@ -248,7 +234,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  31
+                  30
                 </td>
                 <td>
                   0
@@ -298,6 +284,20 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.naflib.TxtToNaf.java">eu/fbk/dkm/pikes/naflib/TxtToNaf.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  23
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.raid.Component.java">eu/fbk/dkm/pikes/raid/Component.java</a>
                 </td>
                 <td>
@@ -312,27 +312,13 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#RolesetInfo.java">RolesetInfo.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  39
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="http://dkm.fbk.eu/pikes//checkstyle.html#ixa.kaflib.Tree.java">ixa/kaflib/Tree.java</a>
                 </td>
                 <td>
                   0
                 </td>
                 <td>
-                  154
+                  155
                 </td>
                 <td>
                   0
@@ -438,6 +424,20 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.annotators.raw.MstServerParser.java">eu/fbk/dkm/pikes/tintop/annotators/raw/MstServerParser.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  28
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.rdf.api.Annotator.java">eu/fbk/dkm/pikes/rdf/api/Annotator.java</a>
                 </td>
                 <td>
@@ -522,20 +522,6 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.util.PikesProperties.java">eu/fbk/dkm/pikes/tintop/util/PikesProperties.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  28
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.resources.vuaopinion.CorpusPreprocessor.java">eu/fbk/dkm/pikes/resources/vuaopinion/CorpusPreprocessor.java</a>
                 </td>
                 <td>
@@ -556,7 +542,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  15
+                  18
                 </td>
                 <td>
                   0
@@ -592,13 +578,55 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.annotators.raw.DBpediaSpotlight.java">eu/fbk/dkm/pikes/tintop/annotators/raw/DBpediaSpotlight.java</a>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.orchestrator.FolderOrchestrator.java">eu/fbk/dkm/pikes/tintop/orchestrator/FolderOrchestrator.java</a>
                 </td>
                 <td>
                   0
                 </td>
                 <td>
-                  29
+                  71
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.resources.trec.Qrels.java">eu/fbk/dkm/pikes/resources/trec/Qrels.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  22
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.resources.trec.FBIS.java">eu/fbk/dkm/pikes/resources/trec/FBIS.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  33
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.annotators.raw.LinkingTag.java">eu/fbk/dkm/pikes/tintop/annotators/raw/LinkingTag.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  65
                 </td>
                 <td>
                   0
@@ -634,6 +662,20 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.util.framenet.ParseFrameNetExamplesWithMate.java">eu/fbk/dkm/pikes/tintop/util/framenet/ParseFrameNetExamplesWithMate.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  73
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://dkm.fbk.eu/pikes//checkstyle.html#META-INF.rdfpro.properties">META-INF/rdfpro.properties</a>
                 </td>
                 <td>
@@ -641,6 +683,20 @@ under the License.
                 </td>
                 <td>
                   2
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.annotators.FakePosAnnotator.java">eu/fbk/dkm/pikes/tintop/annotators/FakePosAnnotator.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  13
                 </td>
                 <td>
                   0
@@ -710,10 +766,10 @@ under the License.
                   0
                 </td>
                 <td>
-                  9
+                  0
                 </td>
                 <td>
-                  0
+                  1
                 </td>
               </tr>
                           <tr>
@@ -738,7 +794,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  40
+                  39
                 </td>
                 <td>
                   0
@@ -766,7 +822,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  9
+                  8
                 </td>
                 <td>
                   0
@@ -781,6 +837,20 @@ under the License.
                 </td>
                 <td>
                   36
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.annotators.Defaults.java">eu/fbk/dkm/pikes/tintop/annotators/Defaults.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  47
                 </td>
                 <td>
                   0
@@ -808,7 +878,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  21
+                  29
                 </td>
                 <td>
                   0
@@ -822,7 +892,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  12
+                  25
                 </td>
                 <td>
                   0
@@ -956,6 +1026,20 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.annotators.FakeAnnaParserAnnotator.java">eu/fbk/dkm/pikes/tintop/annotators/FakeAnnaParserAnnotator.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  11
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.resources.VerbNet.java">eu/fbk/dkm/pikes/resources/VerbNet.java</a>
                 </td>
                 <td>
@@ -1032,21 +1116,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  32
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#ConvertTsvToRdf.java">ConvertTsvToRdf.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  54
+                  28
                 </td>
                 <td>
                   0
@@ -1068,13 +1138,27 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.annotators.raw.DBpediaSpotlightAnnotate.java">eu/fbk/dkm/pikes/tintop/annotators/raw/DBpediaSpotlightAnnotate.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  26
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.server.PipelineServer.java">eu/fbk/dkm/pikes/tintop/server/PipelineServer.java</a>
                 </td>
                 <td>
                   0
                 </td>
                 <td>
-                  24
+                  38
                 </td>
                 <td>
                   0
@@ -1089,6 +1173,20 @@ under the License.
                 </td>
                 <td>
                   25
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.annotators.models.SemaforModel.java">eu/fbk/dkm/pikes/tintop/annotators/models/SemaforModel.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  6
                 </td>
                 <td>
                   0
@@ -1116,7 +1214,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  31
+                  35
                 </td>
                 <td>
                   0
@@ -1145,6 +1243,20 @@ under the License.
                 </td>
                 <td>
                   47
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.resources.treccani.TAOL.java">eu/fbk/dkm/pikes/resources/treccani/TAOL.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  36
                 </td>
                 <td>
                   0
@@ -1228,7 +1340,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  24
+                  23
                 </td>
                 <td>
                   0
@@ -1306,6 +1418,20 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.resources.trec.FR94.java">eu/fbk/dkm/pikes/resources/trec/FR94.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  31
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.raid.mdfsa.wordnet.WordNetLexicalizer.java">eu/fbk/dkm/pikes/raid/mdfsa/wordnet/WordNetLexicalizer.java</a>
                 </td>
                 <td>
@@ -1369,20 +1495,6 @@ under the License.
                 </td>
                 <td>
                   142
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.old.CachedParsedText.java">eu/fbk/dkm/pikes/tintop/old/CachedParsedText.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  33
                 </td>
                 <td>
                   0
@@ -1474,6 +1586,20 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.resources.trec.LATIMES.java">eu/fbk/dkm/pikes/resources/trec/LATIMES.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  36
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.resources.util.fnlu.ValenceUnitType.java">eu/fbk/dkm/pikes/resources/util/fnlu/ValenceUnitType.java</a>
                 </td>
                 <td>
@@ -1516,13 +1642,27 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.ReparseConllStanford.java">eu/fbk/dkm/pikes/tintop/ReparseConllStanford.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.rdf.Main.java">eu/fbk/dkm/pikes/rdf/Main.java</a>
                 </td>
                 <td>
                   0
                 </td>
                 <td>
-                  2
+                  3
                 </td>
                 <td>
                   0
@@ -1536,7 +1676,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  22
+                  42
                 </td>
                 <td>
                   0
@@ -1579,6 +1719,20 @@ under the License.
                 </td>
                 <td>
                   17
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.PipelineTest.java">eu/fbk/dkm/pikes/tintop/PipelineTest.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  3
                 </td>
                 <td>
                   0
@@ -1634,7 +1788,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  27
+                  33
                 </td>
                 <td>
                   0
@@ -1648,7 +1802,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  30
+                  34
                 </td>
                 <td>
                   0
@@ -1656,13 +1810,13 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.annotators.DBpediaSpotlightAnnotator.java">eu/fbk/dkm/pikes/tintop/annotators/DBpediaSpotlightAnnotator.java</a>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.annotators.FakeMstParserAnnotator.java">eu/fbk/dkm/pikes/tintop/annotators/FakeMstParserAnnotator.java</a>
                 </td>
                 <td>
                   0
                 </td>
                 <td>
-                  18
+                  7
                 </td>
                 <td>
                   0
@@ -1676,7 +1830,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  896
+                  899
                 </td>
                 <td>
                   0
@@ -1774,7 +1928,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  714
+                  718
                 </td>
                 <td>
                   0
@@ -1838,6 +1992,20 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.util.framenet.MergeMateFramenet.java">eu/fbk/dkm/pikes/tintop/util/framenet/MergeMateFramenet.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  332
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.naflib.Corpus.java">eu/fbk/dkm/pikes/naflib/Corpus.java</a>
                 </td>
                 <td>
@@ -1873,6 +2041,20 @@ under the License.
                 </td>
                 <td>
                   386
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.annotators.raw.Linking.java">eu/fbk/dkm/pikes/tintop/annotators/raw/Linking.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  21
                 </td>
                 <td>
                   0
@@ -1928,7 +2110,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  18
+                  15
                 </td>
                 <td>
                   0
@@ -2096,7 +2278,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  66
+                  64
                 </td>
                 <td>
                   0
@@ -2110,7 +2292,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  341
+                  209
                 </td>
                 <td>
                   0
@@ -2160,6 +2342,20 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.resources.trec.CR.java">eu/fbk/dkm/pikes/resources/trec/CR.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  36
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.resources.util.onsenses.Wn.java">eu/fbk/dkm/pikes/resources/util/onsenses/Wn.java</a>
                 </td>
                 <td>
@@ -2174,13 +2370,27 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.util.RemoveLoopsInConll.java">eu/fbk/dkm/pikes/tintop/util/RemoveLoopsInConll.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.annotators.AnnaPosAnnotator.java">eu/fbk/dkm/pikes/tintop/annotators/AnnaPosAnnotator.java</a>
                 </td>
                 <td>
                   0
                 </td>
                 <td>
-                  18
+                  19
                 </td>
                 <td>
                   0
@@ -2194,7 +2404,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  69
+                  28
                 </td>
                 <td>
                   0
@@ -2244,20 +2454,6 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#MergeMateFramenet.java">MergeMateFramenet.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  331
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.CommandLineWithLogger.java">eu/fbk/dkm/pikes/tintop/CommandLineWithLogger.java</a>
                 </td>
                 <td>
@@ -2265,6 +2461,20 @@ under the License.
                 </td>
                 <td>
                   31
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.util.framenet.ParseFullTextWithStanford.java">eu/fbk/dkm/pikes/tintop/util/framenet/ParseFullTextWithStanford.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  84
                 </td>
                 <td>
                   0
@@ -2342,13 +2552,13 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.annotators.raw.AnnotatedEntity.java">eu/fbk/dkm/pikes/tintop/annotators/raw/AnnotatedEntity.java</a>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.resources.wes.QueryGoogle.java">eu/fbk/dkm/pikes/resources/wes/QueryGoogle.java</a>
                 </td>
                 <td>
                   0
                 </td>
                 <td>
-                  41
+                  54
                 </td>
                 <td>
                   0
@@ -2418,7 +2628,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  26
+                  21
                 </td>
                 <td>
                   0
@@ -2482,20 +2692,6 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.old.SST.java">eu/fbk/dkm/pikes/tintop/old/SST.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  53
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.server.NafVisualizeHandler.java">eu/fbk/dkm/pikes/tintop/server/NafVisualizeHandler.java</a>
                 </td>
                 <td>
@@ -2503,6 +2699,20 @@ under the License.
                 </td>
                 <td>
                   16
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.resources.tempeval.TMLtoNAF.java">eu/fbk/dkm/pikes/resources/tempeval/TMLtoNAF.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  27
                 </td>
                 <td>
                   0
@@ -2524,6 +2734,20 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.annotators.raw.MachineLinking.java">eu/fbk/dkm/pikes/tintop/annotators/raw/MachineLinking.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  32
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.resources.ontonotes.senses.Inventory.java">eu/fbk/dkm/pikes/resources/ontonotes/senses/Inventory.java</a>
                 </td>
                 <td>
@@ -2538,13 +2762,41 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.annotators.raw.MstParser.java">eu/fbk/dkm/pikes/tintop/annotators/raw/MstParser.java</a>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.annotators.LinkingAnnotator.java">eu/fbk/dkm/pikes/tintop/annotators/LinkingAnnotator.java</a>
                 </td>
                 <td>
                   0
                 </td>
                 <td>
-                  27
+                  23
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.server.ResourcePool.java">eu/fbk/dkm/pikes/tintop/server/ResourcePool.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  16
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.annotators.raw.DBpediaSpotlightCandidates.java">eu/fbk/dkm/pikes/tintop/annotators/raw/DBpediaSpotlightCandidates.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  36
                 </td>
                 <td>
                   0
@@ -2601,20 +2853,6 @@ under the License.
                 </td>
                 <td>
                   46
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.annotators.raw.DBpediaSpotlightTag.java">eu/fbk/dkm/pikes/tintop/annotators/raw/DBpediaSpotlightTag.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  30
                 </td>
                 <td>
                   0
@@ -2712,7 +2950,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  28
+                  29
                 </td>
                 <td>
                   0
@@ -2734,13 +2972,27 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#SplitLinesNaf.java">SplitLinesNaf.java</a>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.ReparseConllAnna.java">eu/fbk/dkm/pikes/tintop/ReparseConllAnna.java</a>
                 </td>
                 <td>
                   0
                 </td>
                 <td>
-                  21
+                  1
+                </td>
+                <td>
+                  1
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.resources.trec.Queries.java">eu/fbk/dkm/pikes/resources/trec/Queries.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  28
                 </td>
                 <td>
                   0
@@ -2908,10 +3160,24 @@ under the License.
                   0
                 </td>
                 <td>
-                  26
+                  29
                 </td>
                 <td>
                   0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.resources.wes.ConvertForSolr.java">eu/fbk/dkm/pikes/resources/wes/ConvertForSolr.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  1
                 </td>
               </tr>
                           <tr>
@@ -2992,7 +3258,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  29
+                  28
                 </td>
                 <td>
                   0
@@ -3056,13 +3322,13 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.resources.ontonotes.senses.Mappings.java">eu/fbk/dkm/pikes/resources/ontonotes/senses/Mappings.java</a>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.annotators.UKBResourcePool.java">eu/fbk/dkm/pikes/tintop/annotators/UKBResourcePool.java</a>
                 </td>
                 <td>
                   0
                 </td>
                 <td>
-                  36
+                  14
                 </td>
                 <td>
                   0
@@ -3070,13 +3336,13 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.server.Default.java">eu/fbk/dkm/pikes/tintop/server/Default.java</a>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.resources.ontonotes.senses.Mappings.java">eu/fbk/dkm/pikes/resources/ontonotes/senses/Mappings.java</a>
                 </td>
                 <td>
                   0
                 </td>
                 <td>
-                  4
+                  36
                 </td>
                 <td>
                   0
@@ -3252,6 +3518,20 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.resources.wes.Naf2Html.java">eu/fbk/dkm/pikes/resources/wes/Naf2Html.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.rdf.util.ProcessorASNorm.java">eu/fbk/dkm/pikes/rdf/util/ProcessorASNorm.java</a>
                 </td>
                 <td>
@@ -3301,6 +3581,20 @@ under the License.
                 </td>
                 <td>
                   20
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.annotators.NERCustomAnnotator.java">eu/fbk/dkm/pikes/tintop/annotators/NERCustomAnnotator.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  49
                 </td>
                 <td>
                   0
@@ -3441,6 +3735,20 @@ under the License.
                 </td>
                 <td>
                   21
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.annotators.MstServerParserAnnotator.java">eu/fbk/dkm/pikes/tintop/annotators/MstServerParserAnnotator.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  17
                 </td>
                 <td>
                   0
@@ -3630,6 +3938,20 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.Ontonotes2Giulio.java">eu/fbk/dkm/pikes/tintop/Ontonotes2Giulio.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  17
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://dkm.fbk.eu/pikes//checkstyle.html#ixa.kaflib.SimpleTopic.java">ixa/kaflib/SimpleTopic.java</a>
                 </td>
                 <td>
@@ -3664,7 +3986,21 @@ under the License.
                   0
                 </td>
                 <td>
-                  2
+                  4
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.util.framenet.RolesetInfo.java">eu/fbk/dkm/pikes/tintop/util/framenet/RolesetInfo.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  39
                 </td>
                 <td>
                   0
@@ -3756,20 +4092,6 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#ParseMateSentences.java">ParseMateSentences.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  64
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.util.NerEntity.java">eu/fbk/dkm/pikes/tintop/util/NerEntity.java</a>
                 </td>
                 <td>
@@ -3819,6 +4141,20 @@ under the License.
                 </td>
                 <td>
                   8
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.tintop.annotators.raw.UKB_MT.java">eu/fbk/dkm/pikes/tintop/annotators/raw/UKB_MT.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  32
                 </td>
                 <td>
                   0
@@ -3958,7 +4294,21 @@ under the License.
                   0
                 </td>
                 <td>
-                  30
+                  37
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.resources.wes.QuerySolr.java">eu/fbk/dkm/pikes/resources/wes/QuerySolr.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  38
                 </td>
                 <td>
                   0
@@ -3972,7 +4322,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  32
+                  41
                 </td>
                 <td>
                   0
@@ -4085,6 +4435,20 @@ under the License.
                 </td>
                 <td>
                   11
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://dkm.fbk.eu/pikes//checkstyle.html#eu.fbk.dkm.pikes.resources.signalmedia.JsonToNaf.java">eu/fbk/dkm/pikes/resources/signalmedia/JsonToNaf.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  34
                 </td>
                 <td>
                   0

@@ -46,7 +46,7 @@
 <a class="jxr_linenumber" name="L38" href="#L38">38</a>  		String host = request.getHeader(<span class="jxr_string">"x-forwarded-for"</span>);
 <a class="jxr_linenumber" name="L39" href="#L39">39</a>  
 <a class="jxr_linenumber" name="L40" href="#L40">40</a>  		String referer = request.getHeader(<span class="jxr_string">"referer"</span>);
-<a class="jxr_linenumber" name="L41" href="#L41">41</a>  		String okReferer = pipeline.getConfig().getProperty(<span class="jxr_string">"back_referer"</span>);
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>  		String okReferer = pipeline.getDefaultConfig().getProperty(<span class="jxr_string">"back_referer"</span>);
 <a class="jxr_linenumber" name="L42" href="#L42">42</a>  
 <a class="jxr_linenumber" name="L43" href="#L43">43</a>  		<strong class="jxr_keyword">boolean</strong> backLink = false;
 <a class="jxr_linenumber" name="L44" href="#L44">44</a>  		<strong class="jxr_keyword">if</strong> (referer != <strong class="jxr_keyword">null</strong> &amp;&amp; okReferer != <strong class="jxr_keyword">null</strong> &amp;&amp; referer.equals(okReferer)) {
@@ -62,47 +62,48 @@
 <a class="jxr_linenumber" name="L54" href="#L54">54</a>  
 <a class="jxr_linenumber" name="L55" href="#L55">55</a>  		KAFDocument doc = text2naf(text, meta);
 <a class="jxr_linenumber" name="L56" href="#L56">56</a>  
-<a class="jxr_linenumber" name="L57" href="#L57">57</a>  		doc = pipeline.parseFromString(doc.toString(), annotators);
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>  		doc = pipeline.parseFromString(doc.toString());
 <a class="jxr_linenumber" name="L58" href="#L58">58</a>  
 <a class="jxr_linenumber" name="L59" href="#L59">59</a>  		String viewString;
-<a class="jxr_linenumber" name="L60" href="#L60">60</a>  		<strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="L61" href="#L61">61</a>  
-<a class="jxr_linenumber" name="L62" href="#L62">62</a>  			HashMap&lt;String, Object&gt; demoProperties = <strong class="jxr_keyword">new</strong> HashMap&lt;&gt;();
-<a class="jxr_linenumber" name="L63" href="#L63">63</a>  			demoProperties.put(<span class="jxr_string">"renderer.template.title"</span>, <span class="jxr_string">"PIKES demo"</span>);
-<a class="jxr_linenumber" name="L64" href="#L64">64</a>  			<strong class="jxr_keyword">if</strong> (backLink) {
-<a class="jxr_linenumber" name="L65" href="#L65">65</a>  				demoProperties.put(<span class="jxr_string">"renderer.template.backlink"</span>, <span class="jxr_string">"javascript:history.back();"</span>);
-<a class="jxr_linenumber" name="L66" href="#L66">66</a>  			}
-<a class="jxr_linenumber" name="L67" href="#L67">67</a>  			<strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="L68" href="#L68">68</a>  				demoProperties.put(<span class="jxr_string">"renderer.template.backlink"</span>, pipeline.getConfig().getProperty(<span class="jxr_string">"back_alt_link"</span>));
-<a class="jxr_linenumber" name="L69" href="#L69">69</a>  				demoProperties.put(<span class="jxr_string">"renderer.template.backlabel"</span>, pipeline.getConfig().getProperty(<span class="jxr_string">"back_alt_text"</span>));
-<a class="jxr_linenumber" name="L70" href="#L70">70</a>  			}
-<a class="jxr_linenumber" name="L71" href="#L71">71</a>  
-<a class="jxr_linenumber" name="L72" href="#L72">72</a>  			<strong class="jxr_keyword">boolean</strong> fusion = request.getParameter(<span class="jxr_string">"rdf_fusion"</span>) != <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="L73" href="#L73">73</a>  			<strong class="jxr_keyword">boolean</strong> normalization = request.getParameter(<span class="jxr_string">"rdf_compaction"</span>) != <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="L74" href="#L74">74</a>  
-<a class="jxr_linenumber" name="L75" href="#L75">75</a>  			demoProperties.put(<span class="jxr_string">"generator.fusion"</span>, fusion);
-<a class="jxr_linenumber" name="L76" href="#L76">76</a>  			demoProperties.put(<span class="jxr_string">"generator.normalization"</span>, normalization);
-<a class="jxr_linenumber" name="L77" href="#L77">77</a>  
-<a class="jxr_linenumber" name="L78" href="#L78">78</a>  			NAFFilter filter = NAFFilter.builder().withProperties(pipeline.getConfig(), <span class="jxr_string">"filter"</span>).build();
-<a class="jxr_linenumber" name="L79" href="#L79">79</a>  			RDFGenerator generator = RDFGenerator.builder().withProperties(demoProperties, <span class="jxr_string">"generator"</span>).build();
-<a class="jxr_linenumber" name="L80" href="#L80">80</a>  			Renderer renderer = Renderer.builder().withProperties(demoProperties, <span class="jxr_string">"renderer"</span>).build();
-<a class="jxr_linenumber" name="L81" href="#L81">81</a>  
-<a class="jxr_linenumber" name="L82" href="#L82">82</a>  			filter.filter(doc);
-<a class="jxr_linenumber" name="L83" href="#L83">83</a>  			<strong class="jxr_keyword">final</strong> Model model = generator.generate(doc, <strong class="jxr_keyword">null</strong>);
-<a class="jxr_linenumber" name="L84" href="#L84">84</a>  			StringWriter writer = <strong class="jxr_keyword">new</strong> StringWriter();
-<a class="jxr_linenumber" name="L85" href="#L85">85</a>  			renderer.renderAll(writer, doc, model, <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>);
-<a class="jxr_linenumber" name="L86" href="#L86">86</a>  			viewString = writer.toString();
-<a class="jxr_linenumber" name="L87" href="#L87">87</a>  
-<a class="jxr_linenumber" name="L88" href="#L88">88</a>  		} <strong class="jxr_keyword">catch</strong> (Exception e) {
-<a class="jxr_linenumber" name="L89" href="#L89">89</a>  			e.printStackTrace();
-<a class="jxr_linenumber" name="L90" href="#L90">90</a>  			viewString = <span class="jxr_string">"Unable to show graph. &lt;br /&gt;&lt;br /&gt;\n&lt;pre&gt;"</span> + doc.toString().replace(<span class="jxr_string">"&lt;"</span>, <span class="jxr_string">"&amp;lt;"</span>).replace(<span class="jxr_string">"&gt;"</span>, <span class="jxr_string">"&amp;gt;"</span>) + <span class="jxr_string">"&lt;/pre&gt;"</span>;
-<a class="jxr_linenumber" name="L91" href="#L91">91</a>  		}
-<a class="jxr_linenumber" name="L92" href="#L92">92</a>  
-<a class="jxr_linenumber" name="L93" href="#L93">93</a>  		<strong class="jxr_keyword">super</strong>.writeOutput(response, <span class="jxr_string">"text/html"</span>, viewString);
-<a class="jxr_linenumber" name="L94" href="#L94">94</a>  	}
-<a class="jxr_linenumber" name="L95" href="#L95">95</a>  }
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>  		viewString = doc.toString();
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>  		<strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>  
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>  			HashMap&lt;String, Object&gt; demoProperties = <strong class="jxr_keyword">new</strong> HashMap&lt;&gt;();
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>  			demoProperties.put(<span class="jxr_string">"renderer.template.title"</span>, <span class="jxr_string">"PIKES demo"</span>);
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>  			<strong class="jxr_keyword">if</strong> (backLink) {
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>  				demoProperties.put(<span class="jxr_string">"renderer.template.backlink"</span>, <span class="jxr_string">"javascript:history.back();"</span>);
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>  			}
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>  			<strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>  				demoProperties.put(<span class="jxr_string">"renderer.template.backlink"</span>, pipeline.getDefaultConfig().getProperty(<span class="jxr_string">"back_alt_link"</span>));
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>  				demoProperties.put(<span class="jxr_string">"renderer.template.backlabel"</span>, pipeline.getDefaultConfig().getProperty(<span class="jxr_string">"back_alt_text"</span>));
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>  			}
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>  
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>  			<strong class="jxr_keyword">boolean</strong> fusion = request.getParameter(<span class="jxr_string">"rdf_fusion"</span>) != <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>  			<strong class="jxr_keyword">boolean</strong> normalization = request.getParameter(<span class="jxr_string">"rdf_compaction"</span>) != <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>  
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>  			demoProperties.put(<span class="jxr_string">"generator.fusion"</span>, fusion);
+<a class="jxr_linenumber" name="L77" href="#L77">77</a>  			demoProperties.put(<span class="jxr_string">"generator.normalization"</span>, normalization);
+<a class="jxr_linenumber" name="L78" href="#L78">78</a>  
+<a class="jxr_linenumber" name="L79" href="#L79">79</a>  			NAFFilter filter = NAFFilter.builder().withProperties(pipeline.getDefaultConfig(), <span class="jxr_string">"filter"</span>).build();
+<a class="jxr_linenumber" name="L80" href="#L80">80</a>  			RDFGenerator generator = RDFGenerator.builder().withProperties(demoProperties, <span class="jxr_string">"generator"</span>).build();
+<a class="jxr_linenumber" name="L81" href="#L81">81</a>  			Renderer renderer = Renderer.builder().withProperties(demoProperties, <span class="jxr_string">"renderer"</span>).build();
+<a class="jxr_linenumber" name="L82" href="#L82">82</a>  
+<a class="jxr_linenumber" name="L83" href="#L83">83</a>  			filter.filter(doc);
+<a class="jxr_linenumber" name="L84" href="#L84">84</a>  			<strong class="jxr_keyword">final</strong> Model model = generator.generate(doc, <strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="L85" href="#L85">85</a>  			StringWriter writer = <strong class="jxr_keyword">new</strong> StringWriter();
+<a class="jxr_linenumber" name="L86" href="#L86">86</a>  			renderer.renderAll(writer, doc, model, <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="L87" href="#L87">87</a>  			viewString = writer.toString();
+<a class="jxr_linenumber" name="L88" href="#L88">88</a>  
+<a class="jxr_linenumber" name="L89" href="#L89">89</a>  		} <strong class="jxr_keyword">catch</strong> (Exception e) {
+<a class="jxr_linenumber" name="L90" href="#L90">90</a>  			e.printStackTrace();
+<a class="jxr_linenumber" name="L91" href="#L91">91</a>  			viewString = <span class="jxr_string">"Unable to show graph. &lt;br /&gt;&lt;br /&gt;\n&lt;pre&gt;"</span> + doc.toString().replace(<span class="jxr_string">"&lt;"</span>, <span class="jxr_string">"&amp;lt;"</span>).replace(<span class="jxr_string">"&gt;"</span>, <span class="jxr_string">"&amp;gt;"</span>) + <span class="jxr_string">"&lt;/pre&gt;"</span>;
+<a class="jxr_linenumber" name="L92" href="#L92">92</a>  		}
+<a class="jxr_linenumber" name="L93" href="#L93">93</a>  
+<a class="jxr_linenumber" name="L94" href="#L94">94</a>  		<strong class="jxr_keyword">super</strong>.writeOutput(response, <span class="jxr_string">"text/html"</span>, viewString);
+<a class="jxr_linenumber" name="L95" href="#L95">95</a>  	}
+<a class="jxr_linenumber" name="L96" href="#L96">96</a>  }
 </pre>
 <hr/>
-<div id="footer">Copyright &#169; 2015 <a href="http://www.fbk.eu">FBK-irst</a>. All rights reserved.</div>
+<div id="footer">Copyright &#169; 2015&#x2013;2016 <a href="http://www.fbk.eu">FBK-irst</a>. All rights reserved.</div>
 </body>
 </html>

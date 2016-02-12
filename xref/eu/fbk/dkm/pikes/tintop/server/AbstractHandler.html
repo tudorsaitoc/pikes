@@ -34,11 +34,11 @@
 <a class="jxr_linenumber" name="L26" href="#L26">26</a>  
 <a class="jxr_linenumber" name="L27" href="#L27">27</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../../eu/fbk/dkm/pikes/tintop/server/AbstractHandler.html">AbstractHandler</a> <strong class="jxr_keyword">extends</strong> HttpHandler {
 <a class="jxr_linenumber" name="L28" href="#L28">28</a>  
-<a class="jxr_linenumber" name="L29" href="#L29">29</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> Pattern ANNOTATOR_PATTERN = Pattern.compile(<span class="jxr_string">"^annotator_(.*)"</span>);
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>  <em class="jxr_comment">//	public final static Pattern ANNOTATOR_PATTERN = Pattern.compile("^annotator_(.*)");</em>
 <a class="jxr_linenumber" name="L30" href="#L30">30</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> Pattern META_PATTERN = Pattern.compile(<span class="jxr_string">"^meta_(.*)"</span>);
 <a class="jxr_linenumber" name="L31" href="#L31">31</a>  	<strong class="jxr_keyword">protected</strong> <a href="../../../../../../eu/fbk/dkm/pikes/tintop/AnnotationPipeline.html">AnnotationPipeline</a> pipeline;
 <a class="jxr_linenumber" name="L32" href="#L32">32</a>  
-<a class="jxr_linenumber" name="L33" href="#L33">33</a>  	<strong class="jxr_keyword">protected</strong> HashSet&lt;String&gt; annotators = <strong class="jxr_keyword">new</strong> HashSet&lt;&gt;();
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>  <em class="jxr_comment">//	protected HashSet&lt;String&gt; annotators = new HashSet&lt;&gt;();</em>
 <a class="jxr_linenumber" name="L34" href="#L34">34</a>  	<strong class="jxr_keyword">protected</strong> HashMap&lt;String, String&gt; meta = <strong class="jxr_keyword">new</strong> HashMap&lt;&gt;();
 <a class="jxr_linenumber" name="L35" href="#L35">35</a>  
 <a class="jxr_linenumber" name="L36" href="#L36">36</a>  	<strong class="jxr_keyword">static</strong> Logger logger = Logger.getLogger(AbstractHandler.<strong class="jxr_keyword">class</strong>.getName());
@@ -58,10 +58,10 @@
 <a class="jxr_linenumber" name="L50" href="#L50">50</a>  
 <a class="jxr_linenumber" name="L51" href="#L51">51</a>  			Matcher matcher;
 <a class="jxr_linenumber" name="L52" href="#L52">52</a>  
-<a class="jxr_linenumber" name="L53" href="#L53">53</a>  			matcher = ANNOTATOR_PATTERN.matcher(parameterLabel);
-<a class="jxr_linenumber" name="L54" href="#L54">54</a>  			<strong class="jxr_keyword">if</strong> (matcher.find()) {
-<a class="jxr_linenumber" name="L55" href="#L55">55</a>  				annotators.add(matcher.group(1));
-<a class="jxr_linenumber" name="L56" href="#L56">56</a>  			}
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>  <em class="jxr_comment">//			matcher = ANNOTATOR_PATTERN.matcher(parameterLabel);</em>
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>  <em class="jxr_comment">//			if (matcher.find()) {</em>
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>  <em class="jxr_comment">//				annotators.add(matcher.group(1));</em>
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>  <em class="jxr_comment">//			}</em>
 <a class="jxr_linenumber" name="L57" href="#L57">57</a>  
 <a class="jxr_linenumber" name="L58" href="#L58">58</a>  			matcher = META_PATTERN.matcher(parameterLabel);
 <a class="jxr_linenumber" name="L59" href="#L59">59</a>  			<strong class="jxr_keyword">if</strong> (matcher.find()) {
@@ -71,7 +71,7 @@
 <a class="jxr_linenumber" name="L63" href="#L63">63</a>  		}
 <a class="jxr_linenumber" name="L64" href="#L64">64</a>  
 <a class="jxr_linenumber" name="L65" href="#L65">65</a>  		<strong class="jxr_keyword">if</strong> (meta.get(<span class="jxr_string">"uri"</span>) == <strong class="jxr_keyword">null</strong> || meta.get(<span class="jxr_string">"uri"</span>).length() == 0) {
-<a class="jxr_linenumber" name="L66" href="#L66">66</a>  			meta.put(<span class="jxr_string">"uri"</span>, pipeline.getConfig().getProperty(<span class="jxr_string">"default_uri"</span>));
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>  			meta.put(<span class="jxr_string">"uri"</span>, pipeline.getDefaultConfig().getProperty(<span class="jxr_string">"default_uri"</span>));
 <a class="jxr_linenumber" name="L67" href="#L67">67</a>  		}
 <a class="jxr_linenumber" name="L68" href="#L68">68</a>  	}
 <a class="jxr_linenumber" name="L69" href="#L69">69</a>  
@@ -124,6 +124,6 @@
 <a class="jxr_linenumber" name="L116" href="#L116">116</a> }
 </pre>
 <hr/>
-<div id="footer">Copyright &#169; 2015 <a href="http://www.fbk.eu">FBK-irst</a>. All rights reserved.</div>
+<div id="footer">Copyright &#169; 2015&#x2013;2016 <a href="http://www.fbk.eu">FBK-irst</a>. All rights reserved.</div>
 </body>
 </html>

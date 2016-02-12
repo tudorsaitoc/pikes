@@ -7,3 +7,10 @@ sync-demo.sh
 upload-website.sh
 .DS_Store
 test
+*.iml
+
+dkm-all.sh
+dkm-commandlist.txt
+dkm-tintop.sh
+mytests
+

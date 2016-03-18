@@ -13,6 +13,7 @@ eu.fbk.dkm.pikes.rdf.vocab
 eu.fbk.dkm.pikes.resources
 eu.fbk.dkm.pikes.resources.boxer
 eu.fbk.dkm.pikes.resources.darmstadt
+eu.fbk.dkm.pikes.resources.ecb
 eu.fbk.dkm.pikes.resources.goodbadfor
 eu.fbk.dkm.pikes.resources.mpqa
 eu.fbk.dkm.pikes.resources.ontonotes
